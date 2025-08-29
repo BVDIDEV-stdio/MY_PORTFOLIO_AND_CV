@@ -118,7 +118,9 @@ The snippet project feature modular character system as well as an animation rig
 
 
 
-### Test Assignment : (b)race yourself
+### Test Assignment : (b)race yourself 
+/[*see repo*](https://github.com/BVDIDEV-stdio/ghost-task))
+/
 A mini-project I made as an assignment from a potential (not anymore) employer. So it ends up in my portfolio, why not.
 
 **Gameplay**
