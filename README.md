@@ -114,6 +114,27 @@ The snippet project feature modular character system as well as an animation rig
 </div>
 <p><em>Stylized sawed-off shotgun for a pet project of mine</em></p>
 
+
+
+
+
+### Test Assignment : (b)race yourself
+A mini-project I made as an assignment from a potential (not anymore) employer. So it ends up in my portfolio, why not.
+
+**Gameplay**
+- First run: the player casually drives through the route. Their movements are real-time recorded during this run. 
+![Bruh gif gone](/gif.gif)
+- Second run: the player competes a "ghost" car that replays the exact movements from their first run, allowing them to race against their own previous performance. 
+![Bruh and this one gone too](/gif1.gif)
+
+**Features**
+- *Input Recording* is as precise as Rigidbody (and I guess physics engine) calculations are. Input record is called in Update exactly because it records a rigidbody-using "pawn" (car);
+- *Input Replay* simply passes input commands into controller - like if player would do. This was made possible thanks to IInputReader (called somewhat else can't recall (pun not intended)) that both *player input class* and *input  replay class* derive from. Of course had to tweak SimCadeVehicleController a little to support input-transmitting classes, as well as new InputSystem;
+- CineMachine camera transitions
+
+
+
+
 ### Pet project
 https://github.com/BVDIDEV-stdio/ITSADAMNJOKE-repo
 So far the project (prototype stage) includes:
