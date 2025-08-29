@@ -122,10 +122,10 @@ The snippet project feature modular character system as well as an animation rig
 A mini-project I made as an assignment from a potential (not anymore) employer. So it ends up in my portfolio, why not.
 
 **Gameplay**
-- First run: the player casually drives through the route. Their movements are real-time recorded during this run. 
-![Bruh gif gone](/gif.gif)
-- Second run: the player competes a "ghost" car that replays the exact movements from their first run, allowing them to race against their own previous performance. 
-![Bruh and this one gone too](/gif1.gif)
+- First run: the player casually drives through the route. Their movements are real-time recorded during this run.\
+![Bruh gif gone](/gif1.gif)
+- Second run: the player competes a "ghost" car that replays the exact movements from their first run, allowing them to race against their own previous performance. \
+![Bruh and this one gone too](/gif.gif)
 
 **Features**
 - *Input Recording* is as precise as Rigidbody (and I guess physics engine) calculations are. Input record is called in Update exactly because it records a rigidbody-using "pawn" (car);
