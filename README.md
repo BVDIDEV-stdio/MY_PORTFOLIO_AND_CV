@@ -127,33 +127,24 @@ A mini-project I made as an assignment from a potential (not anymore) employer. 
 - First run: the player casually drives through the route. Their movements are real-time recorded during this run.\
 ![Bruh gif gone](/gif1.gif)
 - Second run: the player competes a "ghost" car that replays the exact movements from their first run, allowing them to race against their own previous performance. \
-![Bruh and this one gone too](/gif.gif)
+![Bruh this one gone too](/gif.gif)
 
 **Features**
 - *Input Recording* is as precise as Rigidbody (and I guess physics engine) calculations are. Input record is called in Update exactly because it records a rigidbody-using "pawn" (car);
-- *Input Replay* simply passes input commands into controller - like if player would do. This was made possible thanks to IInputReader (called somewhat else can't recall (pun not intended)) that both *player input class* and *input  replay class* derive from. Of course had to tweak SimCadeVehicleController a little to support input-transmitting classes, as well as new InputSystem;
+- *Input Replay* simply passes input commands into controller - like if player would do. This was made possible thanks to input-reading interface that both *player input class* and *input  replay class* derive from. Of course had to tweak SimCadeVehicleController a little to support input-transmitting classes, as well as new InputSystem;
 - CineMachine camera transitions
 
-
-
+### Test Assignment : Crane VR Training
+[*see repo*](https://github.com/BVDIDEV-stdio/TestAssignment-vr-crane-gasAnalyzer)
+**Gameplay**
+- Features a controllable overhead crane. Each degree of freedom and direction (girder, hoist and hook block height) is controlled separately.
+- "Gas analyzer": a compound device. A display and a sensor connected with cable. Display is to show distance between "closest danger" and the sensor. The device can be enabled or disabled. A spinning dog on the loading screen - absolutely necessary.
+[[pics underway]]
 
 ### Pet project
-https://github.com/BVDIDEV-stdio/ITSADAMNJOKE-repo
-So far the project (prototype stage) includes:
-- WASD movement
-- **Jumping**: can provide a regular jumping as well as double-jumping via maxAirJumps that can be increased (e. g. by getting an ability item)
-- **Dash**: DOOM Eternal style: quickly dodge attacks and access hard-to-reach areas. Player's gravity is set to 0 while dashing to provide easy platforming. Dodges do exhaust and recharge so the player can not spam this ability. Max consecutive dodges quantity is adjustable, too
-- **Inventory and Item**: in-game **Item** class entities store refs to Scriptable Objects defining items' very basic properties: title, description, weight and so on. Items are pickable via raycast from player's Camera.transform.forward. **Inventory** class works with a list of **ItemParams** objects carrying the exact values of **Item**s picked in the world (thus destroyed). Inventory has its standard item list logic implemented (addition/removal) as well as UnityEvents, which on invokation call various methods (e. g. Inventory UI update).
-//Also inventory component is designed to be "written once, attached everywhere" so both Player and non-playable entities could use its functions.
-- **UI:** The project includes a **UIWindow** class that serves as a base for any window-based UI. It is user-adjustable in "TES3 Morrowind"-way: players can drag its edges and the upper right corner to resize and reposition the window as needed. **UIWindow** contains no additional logic and acts solely as a content platform - each content element should implement its own logic. For example, the **InventoryMenu** class uses **UIWindow** methods to display buttons and a scrollbar yet the logic for these controls is handled entirely within InventoryMenu.
+*//repo is private*
+Is on game design stage. No code demonstrated via repo link since it's not final - defining system flows should be carried out first. Current code is clean enough for a proto - I practiced on it to keep my skills sharp.
+[[gifs underway]]
+Code: Inventory system done, hitscan guns + visual feedback done. Ammo spending via shot and reload done. UI base window class done.
 
-Additionally, the project features a placeholder pause menu implemented using a menu stack approach.
-
-- **UI: HUD for item info**: this HUD piece displays a card containing the briefest item info (name, pic, type in rarity color style). While the card is displayed, the item is indicated by a rectangular frame that fits the pixel boundaries of the item mesh.
-**WIP: Weapon class : Item, EquipSystem and Projectiles**: currently I am working on weapons Raycast/projectile spawn and also have got working EquipSystem allowing to equip weapons in either hand as well as to wield a weapon in both hands by "switching the grip mode". My goal was to implement the equip system similar to those found in Soulsborne games, because:
-  1. This is an ***utterly*** entertaining challenge
-  2. With careful game design and weapon balancing (including grip variations, bonuses, and penalties) this system will provide a solid foundation for players to experiment with different builds.
-  3. I feel eager to **experiment firsthand** to discover the potential of this kind of system in *first-person shooters*.
-
-
-[*russian language version*](READMErus.md)
+Project game design mainly focuses on a simple CRPG-system support and FPS battle-core.
